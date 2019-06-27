@@ -1,0 +1,25 @@
+.color{
+    color:rgb(245, 239, 239);
+  }
+
+  .center{
+    text-align: center;
+}
+
+.centerdiv {
+    margin: auto;
+    width: 60%;
+    /*border: 3px solid #73AD21;*/
+    padding: 10px;
+  }
+
+
+
+.scroll{
+    
+    height: 534.06px;
+  width: 885px;
+  text-align:center;
+  overflow-y: scroll;
+}
+

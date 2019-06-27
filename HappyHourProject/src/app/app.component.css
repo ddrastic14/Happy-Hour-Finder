@@ -1,0 +1,49 @@
+
+
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color:rgb(121, 125, 129);
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: rgb(179, 17, 17);
+    color: white;
+  }
+
+  
+
+  
+
+  #bg {
+    background-image: url("https://i.imgur.com/QVFUaZP.jpg?1");
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+      
+    /* Preserve aspect ratio */
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+ 
+  
+
+    
+
+  
+

@@ -1,0 +1,132 @@
+
+<h1 class="center color">How would you like your restaurants sorted today?</h1>
+
+<br><br>
+<div class="row">
+  <div class="column">
+      <form>
+        
+          <label class="color">Filter restaurants by name: </label>
+          
+          <select name="sorting" [(ngModel)]="term" [ngModelOptions]="{standalone: true}">
+            <option value="Rec">Rec</option>
+            <option value="Green Turtle">Greene Turtle</option>
+            <option value="Chilis">Chilis</option>
+            <option value="World of Beer">World of Beer</option>
+            <option value="The Point Towson">The Point Towson</option>
+          </select>
+       
+        </form>
+        <br><br>
+        <form>
+            <label class="color">Filter restaurants by starting time: </label>
+            <select name="sorting" [(ngModel)]="term2" [ngModelOptions]="{standalone: true}">
+              <option value="11:00 AM">11:00 AM</option>
+              <option value="3:00 PM">3:00 PM</option>
+              <option value="4:00 PM">4:00 PM</option>
+              <option value="5:00 PM">5:00 PM</option>
+              
+            </select>
+            
+          </form>
+          <br><br>
+          <form>
+              <label class="color">Filter restaurants by ending time: </label>
+              <select name="sorting" [(ngModel)]="term3" [ngModelOptions]="{standalone: true}">
+                <option value="6:00 PM">6:00 PM</option>
+                <option value="7:00 PM">7:00 PM</option>
+                <option value="11:00 PM">11:00 PM</option>
+              </select>
+              
+            </form>
+            <br><br>
+            <form>
+                <label class="color">Filter restaurants by price: </label>
+                <select name="sorting" [(ngModel)]="term4" [ngModelOptions]="{standalone: true}">
+                  <option value="$">$</option>
+                  <option value="$$">$$</option>
+                  <option value="$$$">$$$</option>
+                  <option value="$$$$">$$$$</option>
+                </select>
+              </form>
+              <br><br>
+              <form>
+                  <label class="color">Filter restaurants by rating: </label>
+                  <select name="sorting" [(ngModel)]="term5" [ngModelOptions]="{standalone: true}">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </form>
+                <br><br>
+                <form>
+                    <label class="color">Filter restaurants by address: </label>
+                    <select name="sorting" [(ngModel)]="term6" [ngModelOptions]="{standalone: true}">
+                      <option value="512 York Rd Towson, MD 21204">512 York Rd Towson, MD 21204</option>
+                      <option value="408 York Rd Towson, MD 21204">408 York Rd Towson, MD 21204</option>
+                      <option value="9615 Deereco Road Timonium, MD 21093">9615 Deereco Road Timonium, MD 21093</option>
+                      <option value="125 E Joppa Rd, Towson, MD 21286">125 E Joppa Rd, Towson, MD 21286</option>
+                      <option value="523 York Rd, Towson, MD 21204">523 York Rd, Towson, MD 21204</option>
+                      
+                    </select>
+                  </form>
+                  <br><br>
+                  <form>
+                      <label class="color">Filter restaurants by menu items: </label>
+                      <select name="sorting" [(ngModel)]="term7" [ngModelOptions]="{standalone: true}">
+                        <option value="Budlight">Budlight</option>
+                        <option value="Miller Lite">Miller Lite</option>
+                        <option value="Tequila">Tequila</option>
+                        <option value="Jim Beam">Jim Beam</option>
+                        <option value="Fritz">Fritz</option>
+                        
+                      </select>
+                    </form>
+                    <br><br>
+                    <form>
+                        <label class="color">Filter restaurants by menu item pricing: </label>
+                        <select name="sorting" [(ngModel)]="term8" [ngModelOptions]="{standalone: true}">
+                          <option value="$4.00">$4.00</option>
+                          <option value="$5.00">$5.00</option>
+                          <option value="$5.79">$5.79</option>
+                         
+                          
+                        </select>
+                      </form>
+                      <br><br>
+  </div>
+    
+       
+      
+          <div class="column">
+              <h2 class="color">Restaurant List</h2>
+              <div class="scroll">
+                  <ul *ngFor="let restaurant of restaurants | filter:term | hhStartFilter:term2 | hhEndFilter:term3 | price:term4 | rating:term5 | address:term6 | menu:term7 | itemsPrice:term8 ">
+                      <h2 class="color">{{restaurant.name}}</h2>
+                      <h4 class="color">{{restaurant.happyHourStart}}</h4>
+                      <h4 class="color">{{restaurant.happyHourEnd}}</h4>
+                      <h4 class="color">{{restaurant.price}}</h4>
+                      <h4 class="color">{{restaurant.rating}}</h4>
+                      <h4 class="color">{{restaurant.address}}</h4>
+                      <h4 class="color">{{restaurant.menuItems}}<a [routerLink]="['restaurants',restaurant.id]" class="btn"> See Full Menu</a></h4>
+                      <h4 class="color">{{restaurant.itemsPrice}}</h4>
+                    </ul>
+              </div>
+              
+               
+          </div>
+              
+</div>
+
+
+          
+     
+      
+      
+      
+      
+      
+      
+

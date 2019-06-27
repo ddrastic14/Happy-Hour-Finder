@@ -1,0 +1,19 @@
+<div class="centerdiv">
+    <h1 class="center color">Menu Items</h1>
+    <br><br>
+    <h2 class="center color">Restaurant List</h2>
+                  <div class="scroll">
+                      <ul *ngFor="let item of items">
+                          <h1 class="color">{{item.restaurantName}}</h1>
+                          <h3 class="color">{{item.name}}</h3>
+                          <h3 class="color">${{item.price}}</h3>
+                          
+                        </ul>
+                  </div>
+</div>
+    
+
+
+
+
+
